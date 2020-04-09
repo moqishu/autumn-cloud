@@ -2,7 +2,7 @@ package com.natsucloud.common.mybatis.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 
-public interface BaseService<T> extends IService<T> {
+public interface IBaseService<T> extends IService<T> {
 
     /*
     * 新增

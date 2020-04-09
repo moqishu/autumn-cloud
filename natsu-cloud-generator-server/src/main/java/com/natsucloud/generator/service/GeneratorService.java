@@ -38,7 +38,7 @@ public class GeneratorService {
         pc.setModuleName(generateConfig.getModuleName());
         pc.setParent(generateConfig.getParentPackage());
         //实体类父包
-        pc.setEntity("client.model.entity");
+        pc.setEntity("server.entity");
         //controller父包
         pc.setController("server.controller");
         //mapper父包
@@ -58,7 +58,20 @@ public class GeneratorService {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-
+        strategy.setEntityLombokModel(true);
+        strategy.setTablePrefix(generateConfig.getTablePrefix());
+        strategy.setSuperEntityColumns("id");
+        // mapper 父类
+        //strategy.setSuperMapperClass("com.natsucloud.common.mybatis.base.mapper.SuperMapper");
+        // 实体父类
+        strategy.setSuperEntityClass("com.natsucloud.common.mybatis.entity.BaseEntity");
+        // 接口父类
+        strategy.setSuperServiceClass("com.natsucloud.common.mybatis.service.IBaseService");
+        // 接口实现类父类
+        strategy.setSuperServiceImplClass("com.opencloud.common.mybatis.service.impl.BaseServiceImpl");
+        // 需要生成的表
+        strategy.setInclude(generateConfig.getIncludeTables());
+        mpg.setStrategy(strategy);
 
 
         // 执行生成

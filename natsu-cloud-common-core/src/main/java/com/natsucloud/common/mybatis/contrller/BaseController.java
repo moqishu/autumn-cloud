@@ -1,11 +1,11 @@
 package com.natsucloud.common.mybatis.contrller;
 
 
-import com.natsucloud.common.mybatis.service.BaseService;
+import com.natsucloud.common.mybatis.service.IBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 
-public abstract class BaseController<M extends BaseService<T>,T> {
+public abstract class BaseController<M extends IBaseService<T>,T> {
 
     @Autowired
     protected M baseService;

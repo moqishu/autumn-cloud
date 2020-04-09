@@ -1,7 +1,6 @@
-package com.natsucloud.common.mybatis.model;
+package com.natsucloud.common.mybatis.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import org.springframework.context.annotation.Bean;
 
 public class BaseEntity {
 
