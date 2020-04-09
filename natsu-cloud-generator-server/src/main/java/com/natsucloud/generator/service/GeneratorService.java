@@ -37,16 +37,16 @@ public class GeneratorService {
         PackageConfig pc = new PackageConfig();
         pc.setModuleName(generateConfig.getModuleName());
         pc.setParent(generateConfig.getParentPackage());
-        //实体类父包
-        pc.setEntity("server.entity");
-        //controller父包
-        pc.setController("server.controller");
-        //mapper父包
-        pc.setMapper("server.mapper");
+//        //实体类父包
+//        pc.setEntity("entity");
+//        //controller父包
+//        pc.setController("controller");
+//        //mapper父包
+//        pc.setMapper("mapper");
         //xml父包
-        pc.setXml("server.xml");
-        pc.setServiceImpl("server.service.impl");
-        pc.setService("server.service");
+        pc.setXml("resources.mapper");
+//        pc.setServiceImpl("service.impl");
+//        pc.setService("service");
         mpg.setPackageInfo(pc);
 
         // 配置模板

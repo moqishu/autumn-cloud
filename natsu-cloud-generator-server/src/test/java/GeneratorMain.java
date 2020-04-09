@@ -1,9 +1,31 @@
+import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.natsucloud.generator.service.GenerateConfig;
 import com.natsucloud.generator.service.GeneratorService;
+import org.apache.commons.lang.StringUtils;
 
 import java.io.File;
+import java.util.Scanner;
 
 public class GeneratorMain {
+
+    /**
+     * <p>
+     * 读取控制台内容
+     * </p>
+     */
+    public static String scanner(String tip) {
+        Scanner scanner = new Scanner(System.in);
+        StringBuilder help = new StringBuilder();
+        help.append("请输入" + tip + "：");
+        System.out.println(help.toString());
+        if (scanner.hasNext()) {
+            String ipt = scanner.next();
+            if (StringUtils.isNotEmpty(ipt)) {
+                return ipt;
+            }
+        }
+        throw new MybatisPlusException("请输入正确的" + tip + "！");
+    }
 
     public static void main(String[] args) {
         String outputDir = System.getProperty("user.dir") + File.separator + "natsu-cloud-generator-server";
@@ -14,8 +36,10 @@ public class GeneratorMain {
         config.setJdbcDriver("com.mysql.cj.jdbc.Driver");
         config.setAuthor("moQiShu");
         config.setParentPackage("com.natsucloud");
-        config.setModuleName("appshop");
-        config.setIncludeTables(new String[]{"appshop_order"});
+        //config.setModuleName("appshop");
+        config.setModuleName(scanner("模块名"));
+        //config.setIncludeTables(new String[]{"appshop_order"});
+        config.setIncludeTables(scanner("表名，多个英文逗号分割").split(","));
         config.setTablePrefix(new String[]{"appshop_"});
         config.setOutputDir(outputDir);
         GeneratorService.execute(config);
