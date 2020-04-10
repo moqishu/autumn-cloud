@@ -1,4 +1,4 @@
-package com.natsucloud.common.mybatis.contrller;
+package com.natsucloud.common.mybatis.controller;
 
 
 import com.natsucloud.common.mybatis.service.IBaseService;

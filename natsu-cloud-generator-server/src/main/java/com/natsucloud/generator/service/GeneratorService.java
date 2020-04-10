@@ -22,6 +22,10 @@ public class GeneratorService {
         gc.setAuthor(generateConfig.getAuthor());
         gc.setOpen(false);
         gc.setSwagger2(true);
+        // 不配置则默认接口前缀=I
+        if(!generateConfig.isServiceClassNameStartWithI()){
+            gc.setServiceName("%sService");
+        }
         mpg.setGlobalConfig(gc);
 
         // 数据库配置
@@ -51,6 +55,7 @@ public class GeneratorService {
 
         // 配置模板
         TemplateConfig tmp = new TemplateConfig();
+        // 默认Velocity模板引擎
         mpg.setTemplateEngine(new VelocityTemplateEngine());
         mpg.setTemplate(tmp);
 
@@ -63,6 +68,8 @@ public class GeneratorService {
         strategy.setSuperEntityColumns("id");
         // mapper 父类
         //strategy.setSuperMapperClass("com.natsucloud.common.mybatis.base.mapper.SuperMapper");
+        // 控制器父类
+        strategy.setSuperControllerClass(("com.natsucloud.common.mybatis.controller.BaseController"));
         // 实体父类
         strategy.setSuperEntityClass("com.natsucloud.common.mybatis.entity.BaseEntity");
         // 接口父类
@@ -71,6 +78,7 @@ public class GeneratorService {
         strategy.setSuperServiceImplClass("com.opencloud.common.mybatis.service.impl.BaseServiceImpl");
         // 需要生成的表
         strategy.setInclude(generateConfig.getIncludeTables());
+
         mpg.setStrategy(strategy);
 
 

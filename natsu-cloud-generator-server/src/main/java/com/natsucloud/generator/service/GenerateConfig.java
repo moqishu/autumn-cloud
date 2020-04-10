@@ -66,4 +66,9 @@ public class GenerateConfig implements Serializable {
      * 代码生成目录
      */
     private String outputDir;
+
+    /**
+    * 服务接口是否WithI
+    */
+    private boolean serviceClassNameStartWithI;
 }

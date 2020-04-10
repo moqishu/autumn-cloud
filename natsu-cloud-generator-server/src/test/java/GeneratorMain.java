@@ -30,9 +30,9 @@ public class GeneratorMain {
     public static void main(String[] args) {
         String outputDir = System.getProperty("user.dir") + File.separator + "natsu-cloud-generator-server";
         GenerateConfig config = new GenerateConfig();
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/demo?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC");
+        config.setJdbcUrl("jdbc:mysql://localhost:5831/demo?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC");
         config.setJdbcUserName("root");
-        config.setJdbcPassword("123456");
+        config.setJdbcPassword("Keytop:wabjtam!");
         config.setJdbcDriver("com.mysql.cj.jdbc.Driver");
         config.setAuthor("moQiShu");
         config.setParentPackage("com.natsucloud");
@@ -40,8 +40,11 @@ public class GeneratorMain {
         config.setModuleName(scanner("模块名"));
         //config.setIncludeTables(new String[]{"appshop_order"});
         config.setIncludeTables(scanner("表名，多个英文逗号分割").split(","));
-        config.setTablePrefix(new String[]{"appshop_"});
+        // 去掉表前缀
+        //config.setTablePrefix(new String[]{"t_"});例如:t_carcome=TCarcome去掉Carcome
+        config.setTablePrefix(scanner("表名前缀去除").split(","));
         config.setOutputDir(outputDir);
+        config.setServiceClassNameStartWithI(true);
         GeneratorService.execute(config);
     }
 
