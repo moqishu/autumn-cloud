@@ -3,6 +3,8 @@ package com.natsucloud.common.mybatis.service.impl;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.natsucloud.common.constants.EntityConst;
@@ -15,11 +17,14 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
+/**
+ * 服务基类
+ * 重复重写ServiceImpl原因：固定代码的命名风格
+ * @author moqishu
+ *
+ * */
 public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T> implements IBaseService<T> {
 
     private Class<T> modelClass;
@@ -131,6 +136,18 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
     public List<T> findAll() throws Exception {
         List<T> result = baseMapper.selectList(null);
         return result;
+    }
+
+    @Override
+    public List<T> findByMap(Map<String, Object> map) throws Exception {
+        //Map<String,Object> map = new HashMap<>();
+        //map.put("carPlateNum","闽A009428");
+        return baseMapper.selectByMap(map);
+    }
+
+    @Override
+    public List<T> findByQuery(Wrapper queryWrapper) throws Exception {
+        return baseMapper.selectList(queryWrapper);
     }
 
     private List<Field> getFields() {

@@ -75,7 +75,7 @@ public class GeneratorService {
         // 接口父类
         strategy.setSuperServiceClass("com.natsucloud.common.mybatis.service.IBaseService");
         // 接口实现类父类
-        strategy.setSuperServiceImplClass("com.opencloud.common.mybatis.service.impl.BaseServiceImpl");
+        strategy.setSuperServiceImplClass("com.natsucloud.common.mybatis.service.impl.BaseServiceImpl");
         // 需要生成的表
         strategy.setInclude(generateConfig.getIncludeTables());
 

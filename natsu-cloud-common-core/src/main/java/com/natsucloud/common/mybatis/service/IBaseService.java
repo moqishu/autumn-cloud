@@ -1,8 +1,11 @@
 package com.natsucloud.common.mybatis.service;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
+import java.util.Map;
 
 public interface IBaseService<T> extends IService<T> {
 
@@ -21,5 +24,9 @@ public interface IBaseService<T> extends IService<T> {
     T findById(long id) throws Exception;
 
     List<T> findAll() throws Exception;
+
+    List<T> findByMap(Map<String,Object> map) throws Exception;
+
+    List<T> findByQuery(Wrapper queryWrapper) throws Exception;
 
 }
