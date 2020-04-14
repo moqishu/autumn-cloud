@@ -30,9 +30,10 @@ public class GeneratorMain {
     public static void main(String[] args) {
         String outputDir = System.getProperty("user.dir") + File.separator + "natsu-cloud-base-server/src/main/java";
         GenerateConfig config = new GenerateConfig();
-        config.setJdbcUrl("jdbc:mysql://localhost:5831/demo?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC");
+        config.setJdbcUrl("jdbc:mysql://localhost:3306/natsucloud?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC");
         config.setJdbcUserName("root");
-        config.setJdbcPassword("Keytop:wabjtam!");
+        //config.setJdbcPassword("Keytop:wabjtam!");
+        config.setJdbcPassword("123456");
         config.setJdbcDriver("com.mysql.cj.jdbc.Driver");
         config.setAuthor("moqishu");
         config.setParentPackage("com.natsucloud");
@@ -44,6 +45,9 @@ public class GeneratorMain {
         //config.setTablePrefix(new String[]{"t_"});例如:t_carcome=TCarcome去掉Carcome
         config.setTablePrefix(scanner("表名前缀去除").split(","));
         config.setOutputDir(outputDir);
+        // xml路径
+        String xmlPath = System.getProperty("user.dir") + File.separator + "natsu-cloud-base-server/src/main/resources/mapper";
+        config.setXmlPath(xmlPath);
         config.setServiceClassNameStartWithI(true);
         GeneratorService.execute(config);
     }

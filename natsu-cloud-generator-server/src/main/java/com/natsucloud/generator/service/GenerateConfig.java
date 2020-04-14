@@ -71,4 +71,9 @@ public class GenerateConfig implements Serializable {
     * 服务接口是否WithI
     */
     private boolean serviceClassNameStartWithI;
+
+    /**
+     * xml输出路径
+     * */
+    private String xmlPath;
 }

@@ -17,6 +17,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
+import java.time.LocalDateTime;
 import java.util.*;
 
 /**
@@ -47,7 +48,7 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
                 // 目前只做主键操作，遇到后可直接跳出循环
                 break;
             }
-            // 第二种:根据注解判断
+            /*// 第二种:根据注解判断
             TableId tableId = field.getAnnotation(TableId.class);
             if (tableId != null) {
                 int type = tableId.type().getKey();
@@ -62,7 +63,7 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
                     }
                 }
                 continue;
-            }
+            }*/
             //设置初始值
             switch (fieldName) {
                 case EntityConst.CREATE_ID:
@@ -72,7 +73,7 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
                     setBeanValue(fieldName, model, "getUserName()", field.getGenericType().getTypeName());
                     break;
                 case EntityConst.CREATE_TIME:
-                    setBeanValue(fieldName, model, new Date(), field.getGenericType().getTypeName());
+                    setBeanValue(fieldName, model, LocalDateTime.now(), field.getGenericType().getTypeName());
                     break;
                 default:
                     break;
@@ -168,18 +169,29 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
         methodSet.invoke(model, value);
     }
 
+    private void setDeclaredValue(String fieldName,Object model,Object value) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Method methodSet = modelClass.getSuperclass().getDeclaredMethod("set" + fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1), long.class);
+        //Method methodSet = modelClass.getMethod("set" + fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1), modelClass.getClass().getDeclaredClasses());
+        methodSet.invoke(value);
+    }
+
     private void setBeanValue(String fieldName,Object model,Object value,String fieldType) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         if (value == null || "".equals(value)) {
             return;
         }
+        long idValue=0;
         // 反射字段的数据类型fieldType
-        if (StringUtils.isNotBlank(fieldType)) {
-            if ("java.lang.Long".equals(fieldType)) {
-                value = Long.parseLong(value + "");
-            } else if ("java.lang.Integer".equals(fieldType)) {
-                value = Integer.parseInt(value + "");
-            }
+//        if (StringUtils.isNotBlank(fieldType)) {
+//            if ("java.lang.Long".equals(fieldType) || "long".equals(fieldType)) {
+//                idValue = Long.parseLong(value + "");
+//            } else if ("java.lang.Integer".equals(fieldType)) {
+//                value = Integer.parseInt(value + "");
+//            }
+//        }
+        if (fieldName.equals("id")) {
+            setDeclaredValue(fieldName, model, value);
+        } else {
+            setBeanValue(fieldName, model, value);
         }
-        setBeanValue(fieldName, model, value);
     }
 }

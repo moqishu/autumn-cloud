@@ -1,11 +1,17 @@
 package com.natsucloud.generator.service;
 
+import com.baomidou.mybatisplus.generator.config.po.TableInfo;
+import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
+import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.AbstractTemplateEngine;
 import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
 import sun.security.krb5.internal.crypto.Des;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 代码生成器
@@ -41,30 +47,57 @@ public class GeneratorService {
         PackageConfig pc = new PackageConfig();
         pc.setModuleName(generateConfig.getModuleName());
         pc.setParent(generateConfig.getParentPackage());
+        mpg.setPackageInfo(pc);
 //        //实体类父包
 //        pc.setEntity("entity");
 //        //controller父包
 //        pc.setController("controller");
 //        //mapper父包
 //        pc.setMapper("mapper");
-        //xml父包
-        pc.setXml("resources.mapper");
+//        //xml父包
+//        pc.setXml("resources.mapper");
 //        pc.setServiceImpl("service.impl");
 //        pc.setService("service");
-        mpg.setPackageInfo(pc);
+
+        // 自定义配置
+        InjectionConfig cfg = new InjectionConfig() {
+            @Override
+            public void initMap() {
+                // to do nothing
+            }
+        };
+        List<FileOutConfig> focList = new ArrayList<>();
+        focList.add(new FileOutConfig("/templates/mapper.xml.vm") {
+            @Override
+            public String outputFile(TableInfo tableInfo) {
+                // 自定义输入文件名称
+                return generateConfig.getXmlPath() +"/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
+            }
+        });
+        cfg.setFileOutConfigList(focList);
+        mpg.setCfg(cfg);
+        mpg.setTemplate(new TemplateConfig().setXml(null));
 
         // 配置模板
         TemplateConfig tmp = new TemplateConfig();
         // 默认Velocity模板引擎
         mpg.setTemplateEngine(new VelocityTemplateEngine());
-        mpg.setTemplate(tmp);
+        //mpg.setTemplate(tmp);
 
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityLombokModel(true);
-        strategy.setTablePrefix(generateConfig.getTablePrefix());
+
+        if(generateConfig.getTablePrefix().length>0) {
+            if (generateConfig.getTablePrefix()[0] == "null") {
+                // do nothing
+            } else {
+                strategy.setTablePrefix(generateConfig.getTablePrefix());
+            }
+        }
+
         strategy.setSuperEntityColumns("id");
         // mapper 父类
         //strategy.setSuperMapperClass("com.natsucloud.common.mybatis.base.mapper.SuperMapper");
