@@ -70,11 +70,19 @@ public class SnowFlake {
     }
 
     /**
+     * 私有构造函数(工具类防止实例化)
+     * @param
+     * */
+    private SnowFlake(){
+
+    }
+
+    /**
      * 构造函数
      * @param workerId 工作ID (0~31)
      * @param dataCenterId 数据中心ID (0~31)
      */
-    public SnowFlake(long workerId, long dataCenterId) {
+    private SnowFlake(long workerId, long dataCenterId) {
         if (workerId > maxWorkerId || workerId < 0) {
             throw new IllegalArgumentException(String.format("workerId can't be greater than %d or less than 0", maxWorkerId));
         }
@@ -85,6 +93,10 @@ public class SnowFlake {
         this.dataCenterId = dataCenterId;
     }
 
+    /**
+     * 获取机器码
+     * @param
+     * */
     private static long getWorkId(){
         try {
             String hostAddress = Inet4Address.getLocalHost().getHostAddress();
@@ -100,6 +112,10 @@ public class SnowFlake {
         }
     }
 
+    /**
+     * 获取数据中心
+     * @param
+     * */
     private static Long getDataCenterId(){
         int[] ints = StringUtils.toCodePoints(SystemUtils.getHostName());
         int sums = 0;

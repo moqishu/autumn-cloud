@@ -12,6 +12,7 @@
     <modules>
         <module>natsu-cloud-common-core</module>
         <module>natsu-cloud-generator-server</module>
+        <module>natsu-cloud-base-server</module>
     </modules>
 
     <properties>
