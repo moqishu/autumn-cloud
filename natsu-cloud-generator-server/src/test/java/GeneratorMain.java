@@ -30,10 +30,10 @@ public class GeneratorMain {
     public static void main(String[] args) {
         String outputDir = System.getProperty("user.dir") + File.separator + "natsu-cloud-base-server/src/main/java";
         GenerateConfig config = new GenerateConfig();
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/natsucloud?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC");
+        config.setJdbcUrl("jdbc:mysql://localhost:5831/natsucloud?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC");
         config.setJdbcUserName("root");
-        //config.setJdbcPassword("Keytop:wabjtam!");
-        config.setJdbcPassword("123456");
+        config.setJdbcPassword("Keytop:wabjtam!");
+        //config.setJdbcPassword("123456");
         config.setJdbcDriver("com.mysql.cj.jdbc.Driver");
         config.setAuthor("moqishu");
         config.setParentPackage("com.natsucloud");

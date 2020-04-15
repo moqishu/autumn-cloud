@@ -42,12 +42,10 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
         for (Field field:fieldList) {
             String fieldName = field.getName();
             // 第一种:框架实现基类id的定义
-            if (fieldName.equalsIgnoreCase("id")) {
-                // 主键赋值
-                setBeanValue(field.getName(), model, SnowFlake.generateId(), field.getGenericType().getTypeName());
-                // 目前只做主键操作，遇到后可直接跳出循环
-                break;
-            }
+//            if (fieldName.equalsIgnoreCase("id")) {
+//                // 主键赋值
+//                setBeanValue(field.getName(), model, SnowFlake.generateId(), field.getGenericType().getTypeName());
+//            }
             /*// 第二种:根据注解判断
             TableId tableId = field.getAnnotation(TableId.class);
             if (tableId != null) {
@@ -66,6 +64,8 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
             }*/
             //设置初始值
             switch (fieldName) {
+                case EntityConst.PRIMARY_KEY:
+                    setBeanValue(field.getName(), model, SnowFlake.generateId(), field.getGenericType().getTypeName());
                 case EntityConst.CREATE_ID:
                     setBeanValue(fieldName, model, "getUserId()", field.getGenericType().getTypeName());
                     break;
@@ -171,7 +171,6 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
 
     private void setDeclaredValue(String fieldName,Object model,Object value) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Method methodSet = modelClass.getSuperclass().getDeclaredMethod("set" + fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1), long.class);
-        //Method methodSet = modelClass.getMethod("set" + fieldName.substring(0, 1).toUpperCase() + fieldName.substring(1), modelClass.getClass().getDeclaredClasses());
         methodSet.invoke(value);
     }
 
@@ -179,19 +178,14 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
         if (value == null || "".equals(value)) {
             return;
         }
-        long idValue=0;
         // 反射字段的数据类型fieldType
-//        if (StringUtils.isNotBlank(fieldType)) {
-//            if ("java.lang.Long".equals(fieldType) || "long".equals(fieldType)) {
-//                idValue = Long.parseLong(value + "");
-//            } else if ("java.lang.Integer".equals(fieldType)) {
-//                value = Integer.parseInt(value + "");
-//            }
-//        }
-        if (fieldName.equals("id")) {
-            setDeclaredValue(fieldName, model, value);
-        } else {
-            setBeanValue(fieldName, model, value);
+        if (StringUtils.isNotBlank(fieldType)) {
+            if ("java.lang.Long".equals(fieldType)) {
+                value = Long.parseLong(value + "");
+            } else if ("java.lang.Integer".equals(fieldType)) {
+                value = Integer.parseInt(value + "");
+            }
         }
+        setBeanValue(fieldName, model, value);
     }
 }

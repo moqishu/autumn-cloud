@@ -8,6 +8,11 @@ package com.natsucloud.common.constants;
 public class EntityConst {
 
     /**
+     * 主键
+     * */
+    public final static String PRIMARY_KEY ="id";
+
+    /**
      * 创建者ID
      * */
     public final static String CREATE_ID = "createId";

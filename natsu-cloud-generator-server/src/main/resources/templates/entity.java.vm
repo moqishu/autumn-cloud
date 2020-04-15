@@ -11,6 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import com.alibaba.fastjson.annotation.JSONField;
 #end
 
 /**
@@ -89,6 +90,12 @@ private static final long serialVersionUID=1L;
 ## 逻辑删除注解
 #if(${logicDeleteFieldName}==${field.name})
     @TableLogic
+#end
+#if(${field.propertyType.equals("LocalDate")})
+    @JSONField(format="yyyy-MM-dd")
+#end
+#if(${field.propertyType.equals("LocalDateTime")})
+    @JSONField(format="yyyy-MM-dd HH:mm:ss")
 #end
     private ${field.propertyType} ${field.propertyName};
 #end

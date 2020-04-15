@@ -8,14 +8,5 @@ import java.io.Serializable;
 public abstract class BaseEntity implements Serializable {
 
     @TableField(value = "id")
-    public long id ;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
+    public Long id ;
 }
