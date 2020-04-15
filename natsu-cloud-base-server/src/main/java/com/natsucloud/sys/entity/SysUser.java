@@ -1,5 +1,6 @@
 package com.natsucloud.sys.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.natsucloud.common.mybatis.entity.BaseEntity;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -33,6 +34,7 @@ public class SysUser extends BaseEntity {
 
     @ApiModelProperty(value = "上次登录时间")
     @TableField("lastLoginTime")
+    @JSONField(format="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime lastLoginTime;
 
     @ApiModelProperty(value = "是否管理员")
@@ -51,6 +53,7 @@ public class SysUser extends BaseEntity {
 
     @ApiModelProperty(value = "创建时间")
     @TableField("createTime")
+    @JSONField(format="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
 
 

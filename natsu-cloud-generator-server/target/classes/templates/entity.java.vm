@@ -11,9 +11,9 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
-#end
 import com.alibaba.fastjson.annotation.JSONField;
-##import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat;
+#end
 
 /**
  * <p>
@@ -94,11 +94,11 @@ public class ${entity} implements Serializable {
 #end
 #if(${field.propertyType.equals("LocalDate")})
     @JSONField(format="yyyy-MM-dd")
-    ##@JsonFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(pattern="yyyy-MM-dd")
 #end
 #if(${field.propertyType.equals("LocalDateTime")})
     @JSONField(format="yyyy-MM-dd HH:mm:ss")
-    ##@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
 #end
     private ${field.propertyType} ${field.propertyName};
 #end

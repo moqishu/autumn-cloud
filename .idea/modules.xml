@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/natsu-cloud-base-server/natsu-cloud-base-server.iml" filepath="$PROJECT_DIR$/natsu-cloud-base-server/natsu-cloud-base-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/natsu-cloud-common-core/natsu-cloud-common-core.iml" filepath="$PROJECT_DIR$/natsu-cloud-common-core/natsu-cloud-common-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/natsu-cloud-generator-server/natsu-cloud-generator-server.iml" filepath="$PROJECT_DIR$/natsu-cloud-generator-server/natsu-cloud-generator-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent.iml" filepath="$PROJECT_DIR$/parent.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,6 +1,8 @@
 package com.natsucloud.sys.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.natsucloud.sys.entity.SysSqldemo;
+import com.natsucloud.sys.service.ISysSqldemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -26,6 +28,8 @@ public class SysUserController extends BaseController<ISysUserService, SysUser> 
 
     @Autowired
     ISysUserService sysUserService;
+    @Autowired
+    ISysSqldemoService sysSqldemoService;
 
     @RequestMapping("/demo")
     public String demo() throws Exception {
@@ -41,7 +45,10 @@ public class SysUserController extends BaseController<ISysUserService, SysUser> 
 
         String result = JSON.toJSONString(userList);
 
-        return result;
+        List<SysSqldemo> userList2 = sysSqldemoService.findAll();
+
+        String result2 = JSON.toJSONString(userList2);
+        return result2+result;
     }
 
 }
