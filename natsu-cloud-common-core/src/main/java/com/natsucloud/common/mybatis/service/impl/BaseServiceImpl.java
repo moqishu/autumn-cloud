@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.natsucloud.common.constants.EntityConst;
+import com.natsucloud.common.model.PageData;
 import com.natsucloud.common.mybatis.service.IBaseService;
 import com.natsucloud.common.utils.SnowFlake;
 import io.swagger.models.Model;
@@ -151,6 +152,10 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
         return baseMapper.selectList(queryWrapper);
     }
 
+/*    public PageData PageList(int currentPage, int pageSize, Map<String, Object> map){
+
+    }*/
+
     private List<Field> getFields() {
         List<Field> fieldList = new ArrayList<>(Arrays.asList(modelClass.getDeclaredFields()));
         // 获取基类的字段
@@ -188,4 +193,6 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
         }
         setBeanValue(fieldName, model, value);
     }
+
+
 }

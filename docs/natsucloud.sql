@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS sys_user(
 
 CREATE TABLE IF NOT EXISTS sys_sqldemo(
        id bigint NOT NULL DEFAULT 0 COMMENT '主键',
-       inDate date not null default 0 comment '日期',
+       inDate date not null comment '日期',
        createTime datetime NOT NULL COMMENT '创建时间',
        PRIMARY KEY (id)
     )
