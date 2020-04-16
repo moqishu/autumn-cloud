@@ -6,10 +6,14 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.natsucloud.common.constants.EntityConst;
 import com.natsucloud.common.model.PageData;
+import com.natsucloud.common.model.WhereEntity;
 import com.natsucloud.common.mybatis.service.IBaseService;
+import com.natsucloud.common.utils.IBatisUtils;
 import com.natsucloud.common.utils.SnowFlake;
 import io.swagger.models.Model;
 import org.apache.commons.lang.StringUtils;
@@ -152,9 +156,22 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
         return baseMapper.selectList(queryWrapper);
     }
 
-/*    public PageData PageList(int currentPage, int pageSize, Map<String, Object> map){
+    @Override
+    public PageData PageList(String conditionJson){
+        WhereEntity condition = IBatisUtils.parseWhere(conditionJson);
+        IPage<T> result = baseMapper.selectPage(condition.page,condition.whereSql);
+        PageData pageData = new PageData(result);
+        return pageData;
+    }
 
-    }*/
+    public PageData PageListMap(String conditionJson){
+        WhereEntity condition = IBatisUtils.parseWhere(conditionJson);
+        IPage<List<Map<String,Object>>> result = baseMapper.selectMapsPage(condition.page,condition.whereSql);
+        PageData pageData = new PageData(result);
+        return pageData;
+    }
+
+
 
     private List<Field> getFields() {
         List<Field> fieldList = new ArrayList<>(Arrays.asList(modelClass.getDeclaredFields()));

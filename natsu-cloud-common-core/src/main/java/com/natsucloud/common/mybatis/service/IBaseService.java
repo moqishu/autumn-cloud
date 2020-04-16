@@ -2,7 +2,9 @@ package com.natsucloud.common.mybatis.service;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.natsucloud.common.model.PageData;
 
 import java.util.List;
 import java.util.Map;
@@ -28,5 +30,11 @@ public interface IBaseService<T> extends IService<T> {
     List<T> findByMap(Map<String,Object> map) throws Exception;
 
     List<T> findByQuery(Wrapper queryWrapper) throws Exception;
+
+    //PageData PageList(Map<String, Object> map) throws Exception;
+
+    PageData PageList(String conditionJson) throws Exception;
+
+    PageData PageListMap(String conditionJson) throws Exception;
 
 }

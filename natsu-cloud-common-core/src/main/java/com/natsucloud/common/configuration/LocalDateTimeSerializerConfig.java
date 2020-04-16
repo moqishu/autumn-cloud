@@ -8,7 +8,8 @@ import org.springframework.context.annotation.Configuration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-//@Configuration
+/*
+@Configuration
 public class LocalDateTimeSerializerConfig {
 
     @org.springframework.beans.factory.annotation.Value("${spring.jackson.date-format:yyyy-MM-dd HH:mm:ss}")
@@ -23,4 +24,4 @@ public class LocalDateTimeSerializerConfig {
     public Jackson2ObjectMapperBuilderCustomizer jackson2ObjectMapperBuilderCustomizer() {
         return builder -> builder.serializerByType(LocalDateTime.class, localDateTimeDeserializer());
     }
-}
+}*/
