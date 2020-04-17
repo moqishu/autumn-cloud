@@ -166,7 +166,11 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
 
     public PageData PageListMap(String conditionJson){
         WhereEntity condition = IBatisUtils.parseWhere(conditionJson);
-        IPage<List<Map<String,Object>>> result = baseMapper.selectMapsPage(condition.page,condition.whereSql);
+        IPage<Map<String,Object>> result = baseMapper.selectMapsPage(condition.page,condition.whereSql);
+
+        IBatisUtils.parseDateFormat(result.getRecords());
+
+
         PageData pageData = new PageData(result);
         return pageData;
     }

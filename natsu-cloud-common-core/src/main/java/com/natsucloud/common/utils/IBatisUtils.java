@@ -4,10 +4,16 @@ import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.natsucloud.common.constants.IBatisConst;
 import com.natsucloud.common.model.PageData;
 import com.natsucloud.common.model.WhereEntity;
 
+import java.sql.Date;
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -80,6 +86,31 @@ public class IBatisUtils {
         model.page = new Page(currentPage,pageSize);
 
         return model;
+    }
+
+    public static Map<String,Object> parseDateFormat(Map<String,Object> map){
+        for(Map.Entry<String,Object> model : map.entrySet()){
+            String key = model.getKey();
+            String typeName = model.getValue().getClass().getTypeName();
+            switch (typeName){
+                case IBatisConst.IBF_TIMESTAMP_TYPE:
+                case IBatisConst.IBF_DATE_TYPE:
+                case IBatisConst.IBF_LOCALDATETIME_TYPE:
+                case IBatisConst.IBF_LOCALDATE_TYPE:
+                    String value = model.getValue().toString();
+                    map.put(key,value);
+                    break;
+            }
+        }
+        return map;
+    }
+
+
+    public static List<Map<String,Object>> parseDateFormat(List<Map<String,Object>> mapList) {
+        for (Map<String, Object> map : mapList) {
+            parseDateFormat(map);
+        }
+        return mapList;
     }
 
 }
