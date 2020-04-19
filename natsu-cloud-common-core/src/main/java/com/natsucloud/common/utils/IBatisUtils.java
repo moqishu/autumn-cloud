@@ -25,37 +25,8 @@ public class IBatisUtils {
 
     private IBatisUtils(){}
 
-    public static Wrapper parseWrapper(String conditionJson) {
-
+    public static WhereEntity parseWrapper(Map<String, Object> map) {
         QueryWrapper queryWrapper = new QueryWrapper();
-        Map<String, Object> map = (Map) JSON.parse(conditionJson);
-        for (Map.Entry<String, Object> m : map.entrySet()){
-            String colName = m.getValue().toString();
-            String[] keyAndType = m.getKey().split("&");
-            String key = keyAndType[0];
-            String type = keyAndType.length>1?keyAndType[1]:"";
-            switch (type){
-                case "eq":queryWrapper.eq(key,colName);break;
-                case "ne":queryWrapper.ne(key,colName);break;
-                case "like": queryWrapper.like(key,colName);break;
-                case "likeLeft": queryWrapper.likeLeft(key,colName);break;
-                case "likeRight": queryWrapper.likeRight(key,colName);break;
-                case "notLike": queryWrapper.notLike(key,colName);break;
-                case "gt": queryWrapper.gt(key,colName);break;
-                case "lt": queryWrapper.lt(key,colName);break;
-                case "ge": queryWrapper.ge(key,colName);break;
-                case "le": queryWrapper.le(key,colName);break;
-                default:queryWrapper.eq(key,colName);break;
-            }
-        }
-
-        return queryWrapper;
-    }
-
-    public static WhereEntity parseWhere(String conditionJson) {
-
-        QueryWrapper queryWrapper = new QueryWrapper();
-        Map<String, Object> map = (Map) JSON.parse(conditionJson);
         for (Map.Entry<String, Object> m : map.entrySet()){
             String colName = m.getValue().toString();
             String[] keyAndType = m.getKey().split("&");
@@ -84,8 +55,12 @@ public class IBatisUtils {
         WhereEntity model = new WhereEntity();
         model.whereSql = queryWrapper;
         model.page = new Page(currentPage,pageSize);
-
         return model;
+    }
+
+    public static WhereEntity parseWhere(String conditionJson) {
+        Map<String, Object> map = (Map) JSON.parse(conditionJson);
+        return parseWrapper(map);
     }
 
     public static Map<String,Object> parseDateFormat(Map<String,Object> map){

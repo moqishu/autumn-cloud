@@ -17,7 +17,10 @@ import com.natsucloud.common.utils.IBatisUtils;
 import com.natsucloud.common.utils.SnowFlake;
 import io.swagger.models.Model;
 import org.apache.commons.lang.StringUtils;
+import org.apache.ibatis.annotations.Param;
+import org.mybatis.spring.SqlSessionTemplate;
 
+import javax.annotation.Resource;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -164,18 +167,24 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
         return pageData;
     }
 
-    public PageData PageListMap(String conditionJson){
-        WhereEntity condition = IBatisUtils.parseWhere(conditionJson);
-        IPage<Map<String,Object>> result = baseMapper.selectMapsPage(condition.page,condition.whereSql);
-
-        IBatisUtils.parseDateFormat(result.getRecords());
-
-
+    @Override
+    public PageData PageList(Map<String, Object> map) throws Exception {
+        WhereEntity condition = IBatisUtils.parseWrapper(map);
+        IPage<T> result = baseMapper.selectPage(condition.page,condition.whereSql);
         PageData pageData = new PageData(result);
         return pageData;
     }
 
-
+    @Deprecated
+    @Override
+    public PageData PageListMap(String conditionJson){
+        WhereEntity condition = IBatisUtils.parseWhere(conditionJson);
+        IPage<Map<String,Object>> result = baseMapper.selectMapsPage(condition.page,condition.whereSql);
+        // 直接使用对象查询,返回JSON一致
+        IBatisUtils.parseDateFormat(result.getRecords());
+        PageData pageData = new PageData(result);
+        return pageData;
+    }
 
     private List<Field> getFields() {
         List<Field> fieldList = new ArrayList<>(Arrays.asList(modelClass.getDeclaredFields()));
@@ -214,6 +223,32 @@ public class BaseServiceImpl<M extends BaseMapper<T>,T> extends ServiceImpl<M,T>
         }
         setBeanValue(fieldName, model, value);
     }
+
+//    @Resource
+//    public SqlSessionTemplate sqlSession;
+//
+//    /**
+//     * 自定义sql查询List<EntityMap>
+//     */
+//    public List<Map> selectListEntityMap(QueryWrapper cq) {
+//        return sqlSession.selectList(getMapperName() + "selectListEntityMapByCq", cq);
+//    }
+//
+//    /**
+//     * 获取mapperName
+//     * 自定义原因：省略mapper、service代码
+//     * 可自动获取到XML文件和方法根据id
+//     * 破坏了代码可读性
+//     */
+//    public String getMapperName() {
+//        String mapperName = "";
+//        Class cl = baseMapper.getClass();
+//        Class<?> interfaces[] = cl.getInterfaces();
+//        for (Class<?> anInterface : interfaces) {
+//            mapperName = anInterface.getName();
+//        }
+//        return mapperName + ".";
+//    }
 
 
 }
