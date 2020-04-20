@@ -14,6 +14,7 @@
         <module>natsu-cloud-generator-server</module>
         <module>natsu-cloud-base-server</module>
         <module>natsu-cloud-api-client</module>
+        <module>natsu-cloud-zuul-server</module>
     </modules>
 
     <properties>

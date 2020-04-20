@@ -1,0 +1,16 @@
+
+
+zuul:
+  routes:
+    base-server:
+      path: /base/**
+      serviceId: natsucloud-base-server
+spring:
+  application:
+    name: natsucloud-zuul-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+server:
+  port: 1111
