@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Component
 @FeignClient(value = "natsucloud-base-server")
-public interface FeignDemo {
+public interface DemoService {
 
     @RequestMapping("/demo")
-    String hello();
-
+    String demo();
 
 }

@@ -1,19 +1,19 @@
 package com.natsucloud.openfeign.controller;
 
-import com.natsucloud.openfeign.service.FeignDemo;
+import com.natsucloud.openfeign.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class FeignDemoController {
+public class TestController {
 
     @Autowired
-    public FeignDemo feignDemo;
+    public DemoService demoService;
 
     @RequestMapping("/test")
-    public String hello() {
-        return feignDemo.hello();
+    public String test(){
+        return demoService.demo();
     }
-
 }

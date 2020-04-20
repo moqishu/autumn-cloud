@@ -1,7 +1,7 @@
 # nacos
 spring:
   application:
-    name: natsucloud-base-server
+    name: natsucloud-api-client
   cloud:
     nacos:
       config:
@@ -12,6 +12,4 @@ spring:
         #shared-dataids: common.properties,db.properties
       discovery:
         server-addr: 127.0.0.1:8848
-
-
 

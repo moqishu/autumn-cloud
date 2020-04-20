@@ -19,6 +19,16 @@
             <artifactId>natsu-cloud-common-core</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <!--阿里巴巴 nacos 服务发现-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--阿里巴巴 nacos 配置中心-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
 
     </dependencies>
 
