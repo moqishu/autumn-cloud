@@ -12,5 +12,23 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/natsucloud?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+  redis:
+    ip: 127.0.0.1
+    port: 6379
+    password: acmed
+    timeout: 10000
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 10
+        max-wait: 10000
 server:
   port: 1111
+
