@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.natsucloud.common.logback.LogHelper;
 import com.natsucloud.common.logback.LoggerUtils;
 import com.natsucloud.common.model.PageData;
+import com.natsucloud.common.multidb.DataSource;
+import com.natsucloud.common.multidb.DataSourceType;
 import com.natsucloud.common.utils.JsonUtils;
 import com.natsucloud.common.logback.LoggerBuilder;
 import com.natsucloud.sys.entity.SysSqldemo;
@@ -47,27 +49,11 @@ public class SysUserController extends BaseController<ISysUserService, SysUser> 
     @Autowired
     private LoggerBuilder loggerBuilder;
 
+    @DataSource(DataSourceType.MASTER)
     @RequestMapping("/demo")
     public String demo() throws Exception {
         SysUser sysUser = new SysUser();
-//        logger.info("logback 成功了1");
-//        logger.error("logback 成功了2");
-        logger.debug("logback 成功了3");
-
-        LogHelper.debug("测试行号问题");
-        LoggerUtils.error("sfsfsfsfsdfsd");
-        LoggerUtils.debug("三生三世");
-        LogHelper.debug("测测试案例");
-        LogHelper.info("可是");
-        LogHelper.error("可是s");
-
-        /*sysUser.setUsername("冷秋湖");
-        sysUser.setPassword("123456");
-        sysUser.setRemark("测试账号");
-
-        sysUserService.add(sysUser);*/
-
-//        List<SysUser> userList = sysUserService.findAll();
+        List<SysUser> userList = sysUserService.findAll();
 //
 //        String result = JSON.toJSONString(userList);
 //
@@ -89,8 +75,18 @@ public class SysUserController extends BaseController<ISysUserService, SysUser> 
 //        map2.put("data", LocalDate.now());
 //        map2.put("sss", LocalDateTime.now());
 //
-//        String sss= JSON.toJSONString(map2);
-        return "你们好";
+        String result= JSON.toJSONString(userList);
+        return result;
+    }
+
+    @DataSource(DataSourceType.SLAVE)
+    @RequestMapping("/hello")
+    public String hello() throws Exception {
+        SysUser sysUser = new SysUser();
+        List<SysUser> userList = sysUserService.findAll();
+
+        String result= JSON.toJSONString(userList);
+        return result;
     }
 
 }
