@@ -1,6 +1,7 @@
 package com.natsucloud.common.mybatis.controller;
 
 
+import com.alibaba.fastjson.JSON;
 import com.natsucloud.common.mybatis.service.IBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,12 +14,14 @@ public abstract class BaseController<M extends IBaseService<T>,T> {
     @PostMapping(value = "add")
     public String add(T model) throws Exception {
         baseService.add(model);
-        return model.toString();
+        return JSON.toJSONString(model);
     }
 
     public String update(T model) throws Exception {
-        baseService.updateById(model);
-        return "";
+        baseService.update(model);
+        return JSON.toJSONString(model);
     }
+
+
 
 }
