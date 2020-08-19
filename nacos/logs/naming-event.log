@@ -1,0 +1,30 @@
+2020-08-19 21:54:08,835 INFO DEFAULT_GROUP@@natsucloud-base-server {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:8888:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-08-19 21:54:08,837 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@natsucloud-base-server, ips: 192.168.3.2:8888_true,
+
+2020-08-19 22:00:59,276 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@natsucloud-base-server, ips: 192.168.3.2:8888_true,
+
+2020-08-19 22:10:26,066 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@natsucloud-base-server, ips: 192.168.3.2:8888_true,
+
+2020-08-19 22:11:27,530 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@natsucloud-base-server, ips: 192.168.3.2:8888_true,
+
+2020-08-19 22:13:29,186 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@natsucloud-base-server, ips: 192.168.3.2:8888_true,
+
+2020-08-19 22:21:36,455 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:8888@DEFAULT@DEFAULT_GROUP@@natsucloud-base-server, region: unknown, msg: client timeout after 15000, last beat: 1597846878211
+
+2020-08-19 22:21:51,632 INFO DEFAULT_GROUP@@natsucloud-base-server {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.3.2:8888:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-08-19 22:21:51,632 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@natsucloud-base-server, ips: 
+
+2020-08-19 22:35:59,988 INFO DEFAULT_GROUP@@natsucloud-base-server {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.3.2:8888:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-08-19 22:35:59,988 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@natsucloud-base-server, ips: 192.168.3.2:8888_true,
+
+2020-08-19 22:36:21,594 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@natsucloud-base-server, ips: 192.168.3.2:8888_true,
+
+2020-08-19 22:47:24,100 INFO {POS} {IP-DISABLED} valid: 192.168.3.2:8888@DEFAULT@DEFAULT_GROUP@@natsucloud-base-server, region: unknown, msg: client timeout after 15000, last beat: 1597848426020
+
+2020-08-19 22:47:38,170 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@natsucloud-base-server, ips: 192.168.3.2:8888_false,
+
+2020-08-19 22:47:41,186 INFO service: DEFAULT_GROUP@@natsucloud-base-server {POS} {IP-ENABLED} valid: 192.168.3.2:8888@DEFAULT, region: unknown, msg: client beat ok
+

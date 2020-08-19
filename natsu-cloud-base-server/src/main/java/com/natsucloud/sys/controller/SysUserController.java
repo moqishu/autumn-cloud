@@ -5,8 +5,6 @@ import com.natsucloud.common.logback.LogHelper;
 import com.natsucloud.common.multidb.DataSource;
 import com.natsucloud.common.multidb.DataSourceType;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -27,27 +25,22 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/")
-@Slf4j
 public class SysUserController extends BaseController<ISysUserService, SysUser> {
 
     @Autowired
     ISysUserService sysUserService;
-
-    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     @DataSource(DataSourceType.MASTER)
     @RequestMapping("/demo")
     public String demo() throws Exception {
         SysUser sysUser = new SysUser();
         List<SysUser> userList = sysUserService.findAll();
-        log.info("你好的");
 
         LogHelper.info("一切尽在不言中");
         try {
             int i = 1/0;
         }catch (Exception e){
             e.printStackTrace();
-            log.error(e.toString());
         }
 
 //

@@ -1,0 +1,72 @@
+2020-08-19 21:54:09,844 INFO DEFAULT_GROUP@@natsucloud-base-server is changed, add it to push queue.
+
+2020-08-19 22:01:00,278 INFO DEFAULT_GROUP@@natsucloud-base-server is changed, add it to push queue.
+
+2020-08-19 22:01:00,279 INFO serviceName: DEFAULT_GROUP@@natsucloud-base-server changed, schedule push for: 192.168.56.1:56509, agent: Nacos-Java-Client:v1.0.0, key: 192.168.56.1,56509,2095425241699
+
+2020-08-19 22:01:00,279 INFO send udp packet: 192.168.56.1,56509,2095425241699
+
+2020-08-19 22:01:00,289 INFO received ack: {"type": "push-ack", "lastRefTime":"2095425241699", "data":""} from: 192.168.56.1:56509, cost: 10 ms, unacked: 0, total push: 1
+
+2020-08-19 22:10:27,073 INFO DEFAULT_GROUP@@natsucloud-base-server is changed, add it to push queue.
+
+2020-08-19 22:10:27,074 INFO serviceName: DEFAULT_GROUP@@natsucloud-base-server changed, schedule push for: 192.168.56.1:54000, agent: Nacos-Java-Client:v1.0.0, key: 192.168.56.1,54000,2662220902900
+
+2020-08-19 22:10:27,074 INFO send udp packet: 192.168.56.1,54000,2662220902900
+
+2020-08-19 22:10:27,084 INFO received ack: {"type": "push-ack", "lastRefTime":"2662220902900", "data":""} from: 192.168.56.1:54000, cost: 10 ms, unacked: 0, total push: 2
+
+2020-08-19 22:11:28,536 INFO DEFAULT_GROUP@@natsucloud-base-server is changed, add it to push queue.
+
+2020-08-19 22:11:28,537 INFO serviceName: DEFAULT_GROUP@@natsucloud-base-server changed, schedule push for: 192.168.56.1:54531, agent: Nacos-Java-Client:v1.0.0, key: 192.168.56.1,54531,2723684231700
+
+2020-08-19 22:11:28,537 INFO send udp packet: 192.168.56.1,54531,2723684231700
+
+2020-08-19 22:11:28,546 INFO received ack: {"type": "push-ack", "lastRefTime":"2723684231700", "data":""} from: 192.168.56.1:54531, cost: 9 ms, unacked: 0, total push: 3
+
+2020-08-19 22:13:30,202 INFO DEFAULT_GROUP@@natsucloud-base-server is changed, add it to push queue.
+
+2020-08-19 22:13:30,204 INFO serviceName: DEFAULT_GROUP@@natsucloud-base-server changed, schedule push for: 192.168.56.1:51068, agent: Nacos-Java-Client:v1.0.0, key: 192.168.56.1,51068,2845349695100
+
+2020-08-19 22:13:30,208 INFO send udp packet: 192.168.56.1,51068,2845349695100
+
+2020-08-19 22:13:30,221 INFO received ack: {"type": "push-ack", "lastRefTime":"2845349695100", "data":""} from: 192.168.56.1:51068, cost: 13 ms, unacked: 0, total push: 4
+
+2020-08-19 22:21:37,472 INFO DEFAULT_GROUP@@natsucloud-base-server is changed, add it to push queue.
+
+2020-08-19 22:21:52,635 INFO DEFAULT_GROUP@@natsucloud-base-server is changed, add it to push queue.
+
+2020-08-19 22:36:00,993 INFO DEFAULT_GROUP@@natsucloud-base-server is changed, add it to push queue.
+
+2020-08-19 22:36:00,993 INFO serviceName: DEFAULT_GROUP@@natsucloud-base-server changed, schedule push for: 192.168.56.1:61677, agent: Nacos-Java-Client:v1.0.0, key: 192.168.56.1,61677,4196140174000
+
+2020-08-19 22:36:00,993 INFO send udp packet: 192.168.56.1,61677,4196140174000
+
+2020-08-19 22:36:00,998 INFO received ack: {"type": "push-ack", "lastRefTime":"4196140174000", "data":""} from: 192.168.56.1:61677, cost: 5 ms, unacked: 0, total push: 5
+
+2020-08-19 22:36:22,602 INFO DEFAULT_GROUP@@natsucloud-base-server is changed, add it to push queue.
+
+2020-08-19 22:36:22,602 INFO serviceName: DEFAULT_GROUP@@natsucloud-base-server changed, schedule push for: 192.168.56.1:61683, agent: Nacos-Java-Client:v1.0.0, key: 192.168.56.1,61683,4217749529800
+
+2020-08-19 22:36:22,602 INFO send udp packet: 192.168.56.1,61683,4217749529800
+
+2020-08-19 22:36:22,627 INFO received ack: {"type": "push-ack", "lastRefTime":"4217749529800", "data":""} from: 192.168.56.1:61683, cost: 24 ms, unacked: 0, total push: 6
+
+2020-08-19 22:47:25,105 INFO DEFAULT_GROUP@@natsucloud-base-server is changed, add it to push queue.
+
+2020-08-19 22:47:39,182 INFO DEFAULT_GROUP@@natsucloud-base-server is changed, add it to push queue.
+
+2020-08-19 22:47:39,183 INFO serviceName: DEFAULT_GROUP@@natsucloud-base-server changed, schedule push for: 192.168.56.1:53576, agent: Nacos-Java-Client:v1.0.0, key: 192.168.56.1,53576,4894328977600
+
+2020-08-19 22:47:39,183 INFO send udp packet: 192.168.56.1,53576,4894328977600
+
+2020-08-19 22:47:39,204 INFO received ack: {"type": "push-ack", "lastRefTime":"4894328977600", "data":""} from: 192.168.56.1:53576, cost: 21 ms, unacked: 0, total push: 7
+
+2020-08-19 22:47:42,198 INFO DEFAULT_GROUP@@natsucloud-base-server is changed, add it to push queue.
+
+2020-08-19 22:47:42,199 INFO serviceName: DEFAULT_GROUP@@natsucloud-base-server changed, schedule push for: 192.168.56.1:53576, agent: Nacos-Java-Client:v1.0.0, key: 192.168.56.1,53576,4897345539400
+
+2020-08-19 22:47:42,200 INFO send udp packet: 192.168.56.1,53576,4897345539400
+
+2020-08-19 22:47:42,204 INFO received ack: {"type": "push-ack", "lastRefTime":"4897345539400", "data":""} from: 192.168.56.1:53576, cost: 4 ms, unacked: 0, total push: 8
+

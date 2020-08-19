@@ -1,0 +1,658 @@
+2020-08-19 21:32:21,355 INFO Starting Nacos v1.2.1 on DESKTOP-K6GDVL3 with PID 9884 (D:\ProgramData\nacos\target\nacos-server.jar started by Administrator in D:\ProgramData\nacos\bin)
+
+2020-08-19 21:32:21,358 INFO The following profiles are active: standalone
+
+2020-08-19 21:32:23,072 INFO Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$141a207b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-08-19 21:32:23,141 INFO Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-08-19 21:32:23,144 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@70cf32e3' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-08-19 21:32:23,147 INFO Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$38eec32d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-08-19 21:32:23,150 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-08-19 21:32:23,790 INFO Tomcat initialized with port(s): 8848 (http)
+
+2020-08-19 21:32:23,818 INFO Starting service [Tomcat]
+
+2020-08-19 21:32:23,819 INFO Starting Servlet Engine: Apache Tomcat/9.0.13
+
+2020-08-19 21:32:23,829 INFO The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\MyProgramFiles\Java\jdk1.8.0_162\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\ProgramData\Python\Python38\Scripts\;D:\ProgramData\Python\Python38\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Program Files\nodejs\;D:\Program Files\Git\cmd;D:\ProgramData\gradle-6.4.1\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\.dotnet\tools;.]
+
+2020-08-19 21:32:23,907 INFO Initializing Spring embedded WebApplicationContext
+
+2020-08-19 21:32:23,907 INFO Root WebApplicationContext: initialization completed in 2500 ms
+
+2020-08-19 21:32:33,405 INFO Reflections took 35 ms to scan 1 urls, producing 6 keys and 24 values 
+
+2020-08-19 21:32:33,452 INFO Reflections took 4 ms to scan 1 urls, producing 2 keys and 12 values 
+
+2020-08-19 21:32:33,462 INFO Reflections took 4 ms to scan 1 urls, producing 3 keys and 15 values 
+
+2020-08-19 21:32:34,509 INFO Use Mysql as the driver
+
+2020-08-19 21:32:35,116 INFO Initializing ExecutorService 'applicationTaskExecutor'
+
+2020-08-19 21:32:35,363 INFO Adding welcome page: class path resource [static/index.html]
+
+2020-08-19 21:32:35,726 INFO Creating filter chain: Ant [pattern='/**'], []
+
+2020-08-19 21:32:35,765 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2cab9998, org.springframework.security.web.context.SecurityContextPersistenceFilter@9d157ff, org.springframework.security.web.header.HeaderWriterFilter@64bc21ac, org.springframework.security.web.csrf.CsrfFilter@2f94c4db, org.springframework.security.web.authentication.logout.LogoutFilter@403132fc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5df417a7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61078690, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f7a7219, org.springframework.security.web.session.SessionManagementFilter@5d25e6bb, org.springframework.security.web.access.ExceptionTranslationFilter@72ccd81a]
+
+2020-08-19 21:32:35,881 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+
+2020-08-19 21:32:35,924 INFO Initializing ExecutorService 'taskScheduler'
+
+2020-08-19 21:32:36,058 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
+
+2020-08-19 21:32:36,068 INFO Started Nacos in 15.563 seconds (JVM running for 16.006)
+
+2020-08-19 21:32:36,068 INFO Nacos logs files: D:\ProgramData\nacos\logs\
+
+2020-08-19 21:32:36,069 INFO Nacos conf files: D:\ProgramData\nacos\conf\
+
+2020-08-19 21:32:36,069 INFO Nacos data files: D:\ProgramData\nacos\data\
+
+2020-08-19 21:32:36,070 INFO Nacos started successfully in stand alone mode.
+
+2020-08-19 21:32:36,223 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+2020-08-19 21:32:36,223 INFO Initializing Servlet 'dispatcherServlet'
+
+2020-08-19 21:32:36,235 INFO Completed initialization in 12 ms
+
+2020-08-19 21:42:34,283 INFO [capacityManagement] start correct usage
+
+2020-08-19 21:42:34,314 INFO [capacityManagement] end correct usage, cost: 0s
+
+2020-08-19 21:42:34,501 WARN clearConfigHistory start
+
+2020-08-19 21:52:34,324 INFO [capacityManagement] start correct usage
+
+2020-08-19 21:52:34,329 INFO [capacityManagement] end correct usage, cost: 0s
+
+2020-08-19 21:52:34,524 WARN clearConfigHistory start
+
+2020-08-19 21:54:09,179 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:54:09,180 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:54:09,380 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:54:09,380 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:54:38,902 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:54:38,902 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:55:08,417 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:55:08,417 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:55:37,931 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:55:37,931 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:56:07,444 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:56:07,444 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:56:36,957 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:56:36,957 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:57:06,464 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:57:06,464 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:57:35,968 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:57:35,969 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:58:05,484 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:58:05,485 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:58:34,998 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:58:34,998 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:59:04,511 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:59:04,511 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:59:34,016 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 21:59:34,016 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:00:03,531 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:00:03,532 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:00:33,036 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:00:33,036 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:00:59,616 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:00:59,616 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:00:59,817 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:00:59,817 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:01:29,322 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:01:29,322 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:01:58,829 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:01:58,830 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:02:28,342 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:02:28,342 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:02:34,343 INFO [capacityManagement] start correct usage
+
+2020-08-19 22:02:34,343 INFO [capacityManagement] end correct usage, cost: 0s
+
+2020-08-19 22:02:34,530 WARN clearConfigHistory start
+
+2020-08-19 22:02:57,848 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:02:57,848 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:03:27,358 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:03:27,358 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:03:56,866 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:03:56,866 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:04:26,374 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:04:26,375 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:04:55,883 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:04:55,883 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:05:25,392 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:05:25,392 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:05:54,903 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:05:54,903 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:06:24,413 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:06:24,413 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:06:53,926 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:06:53,926 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:07:23,430 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:07:23,430 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:07:52,945 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:07:52,945 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:08:22,459 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:08:22,460 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:08:51,972 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:08:51,972 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:09:21,490 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:09:21,490 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:09:50,998 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:09:50,998 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:10:26,409 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:10:26,409 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:10:26,611 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:10:26,611 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:10:56,117 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:10:56,117 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:11:27,890 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:11:27,890 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:11:28,089 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:11:28,089 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:11:57,603 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:11:57,604 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:12:27,113 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:12:27,114 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:12:34,352 INFO [capacityManagement] start correct usage
+
+2020-08-19 22:12:34,354 INFO [capacityManagement] end correct usage, cost: 0s
+
+2020-08-19 22:12:34,540 WARN clearConfigHistory start
+
+2020-08-19 22:12:56,627 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:12:56,627 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:13:29,535 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:13:29,535 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:13:29,736 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:13:29,736 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:13:59,247 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:13:59,247 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:14:28,768 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:14:28,768 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:14:58,286 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:14:58,286 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:15:27,801 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:15:27,801 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:15:57,319 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:15:57,319 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:16:26,839 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:16:26,839 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:16:56,353 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:16:56,354 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:17:25,870 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:17:25,870 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:17:55,378 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:17:55,378 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:18:24,885 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:18:24,885 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:18:54,398 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:18:54,398 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:19:23,904 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:19:23,904 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:19:53,419 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:19:53,419 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:20:22,927 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:20:22,927 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:20:52,430 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:20:52,430 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:22:34,365 INFO [capacityManagement] start correct usage
+
+2020-08-19 22:22:34,365 INFO [capacityManagement] end correct usage, cost: 0s
+
+2020-08-19 22:22:34,549 WARN clearConfigHistory start
+
+2020-08-19 22:32:34,376 INFO [capacityManagement] start correct usage
+
+2020-08-19 22:32:34,377 INFO [capacityManagement] end correct usage, cost: 0s
+
+2020-08-19 22:32:34,564 WARN clearConfigHistory start
+
+2020-08-19 22:36:00,401 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:36:00,401 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:36:00,601 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:36:00,602 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:36:21,997 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:36:21,997 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:36:22,198 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:36:22,199 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:36:51,711 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:36:51,712 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:37:21,230 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:37:21,230 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:37:50,732 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:37:50,732 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:38:20,240 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:38:20,240 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:38:49,757 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:38:49,757 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:39:19,268 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:39:19,268 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:39:48,772 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:39:48,772 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:40:18,282 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:40:18,282 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:40:47,788 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:40:47,788 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:41:17,305 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:41:17,306 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:41:46,813 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:41:46,814 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:42:16,328 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:42:16,329 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:42:34,384 INFO [capacityManagement] start correct usage
+
+2020-08-19 22:42:34,384 INFO [capacityManagement] end correct usage, cost: 0s
+
+2020-08-19 22:42:34,571 WARN clearConfigHistory start
+
+2020-08-19 22:42:45,837 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:42:45,837 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:43:15,342 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:43:15,343 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:43:44,855 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:43:44,855 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:44:14,358 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:44:14,358 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:44:43,864 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:44:43,864 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:45:13,375 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:45:13,376 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:45:42,879 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:45:42,879 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:46:12,397 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:46:12,397 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:46:41,918 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:46:41,918 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:47:38,544 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:47:38,544 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:47:38,745 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:47:38,745 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:48:08,260 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:48:08,260 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:48:37,768 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:48:37,768 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:49:07,285 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:49:07,285 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:49:36,795 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:49:36,795 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:50:06,312 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:50:06,312 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:50:35,832 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:50:35,832 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:51:05,337 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:51:05,337 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:51:34,844 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:51:34,844 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:52:04,360 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:52:04,361 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:52:33,868 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:52:33,868 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:52:34,398 INFO [capacityManagement] start correct usage
+
+2020-08-19 22:52:34,398 INFO [capacityManagement] end correct usage, cost: 0s
+
+2020-08-19 22:52:34,585 WARN clearConfigHistory start
+
+2020-08-19 22:53:03,385 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:53:03,385 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:53:32,892 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:53:32,892 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:54:02,406 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:54:02,406 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:54:31,921 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:54:31,922 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:55:01,434 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:55:01,435 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:55:30,945 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:55:30,945 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:56:00,460 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:56:00,460 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:56:29,978 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:56:29,978 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:56:59,483 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:56:59,483 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:57:29,000 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:57:29,001 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:57:58,506 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:57:58,506 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:58:28,027 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:58:28,027 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:58:57,545 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:58:57,545 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:59:27,054 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:59:27,055 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:59:56,574 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 22:59:56,574 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:00:26,086 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:00:26,086 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:00:55,603 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:00:55,603 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:01:25,118 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:01:25,118 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:01:54,620 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:01:54,620 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:02:24,126 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:02:24,126 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:02:34,410 INFO [capacityManagement] start correct usage
+
+2020-08-19 23:02:34,411 INFO [capacityManagement] end correct usage, cost: 0s
+
+2020-08-19 23:02:34,598 WARN clearConfigHistory start
+
+2020-08-19 23:02:53,636 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:02:53,637 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:03:23,153 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:03:23,154 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:03:52,663 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:03:52,663 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:04:22,172 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:04:22,172 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:04:51,686 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:04:51,687 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:05:21,200 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:05:21,200 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:05:50,707 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:05:50,708 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:06:20,219 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:06:20,220 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:06:49,734 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:06:49,734 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:07:19,243 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:07:19,243 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:07:48,753 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:07:48,753 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:08:18,260 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:08:18,261 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:08:47,777 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:08:47,777 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:09:17,296 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:09:17,296 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:09:46,811 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:09:46,812 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:10:16,328 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:10:16,328 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:10:45,843 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:10:45,843 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:11:15,359 INFO listen config id:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
+2020-08-19 23:11:15,359 INFO listen config id 2:natsucloud-base-server.propertiesDEFAULT_GROUPnatsucloud-base-server-pro.propertiesDEFAULT_GROUP
+
