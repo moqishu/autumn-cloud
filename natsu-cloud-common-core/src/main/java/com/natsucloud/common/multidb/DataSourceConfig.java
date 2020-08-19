@@ -13,10 +13,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 @Configuration
 public class DataSourceConfig {
@@ -50,6 +52,16 @@ public class DataSourceConfig {
 //        return paginationInterceptor;
 //    }
 
+//    @Bean
+//    public PerformanceInterceptor performanceInterceptor() {
+//        PerformanceInterceptor performanceInterceptor = new PerformanceInterceptor();
+//        //格式化sql语句
+//        Properties properties = new Properties();
+//        properties.setProperty("format", "false");
+//        performanceInterceptor.setProperties(properties);
+//        return performanceInterceptor;
+//    }
+
     /**
      * 返回MybatisSqlSessionFactory
      *
@@ -61,9 +73,8 @@ public class DataSourceConfig {
         MybatisSqlSessionFactoryBean sqlSessionFactory = new MybatisSqlSessionFactoryBean();
         sqlSessionFactory.setDataSource(dataSource(masterDataSource(), slaveDataSource()));
 
-        /**application.yml文件中已经配置，无需再配置
-         sqlSessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:/mapper/*Mapper.xml"));
-         */
+        /**application.yml文件中已经配置，无需再配置*/
+        sqlSessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:/mapper/*.xml"));
 
         MybatisConfiguration configuration = new MybatisConfiguration();
         configuration.setJdbcTypeForNull(JdbcType.NULL);

@@ -13,4 +13,6 @@ import com.natsucloud.common.mybatis.service.IBaseService;
  */
 public interface ISysUserService extends IBaseService<SysUser> {
 
+    void get();
+
 }

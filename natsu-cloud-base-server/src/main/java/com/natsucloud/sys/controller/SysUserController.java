@@ -1,16 +1,10 @@
 package com.natsucloud.sys.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.natsucloud.common.logback.LogHelper;
-import com.natsucloud.common.logback.LoggerUtils;
-import com.natsucloud.common.model.PageData;
 import com.natsucloud.common.multidb.DataSource;
 import com.natsucloud.common.multidb.DataSourceType;
-import com.natsucloud.common.utils.JsonUtils;
-import com.natsucloud.common.logback.LoggerBuilder;
-import com.natsucloud.sys.entity.SysSqldemo;
-import com.natsucloud.sys.service.ISysSqldemoService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +15,7 @@ import com.natsucloud.sys.service.ISysUserService;
 import com.natsucloud.sys.entity.SysUser;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * <p>
@@ -37,23 +27,29 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/")
+@Slf4j
 public class SysUserController extends BaseController<ISysUserService, SysUser> {
 
     @Autowired
     ISysUserService sysUserService;
-    @Autowired
-    ISysSqldemoService sysSqldemoService;
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
-
-    @Autowired
-    private LoggerBuilder loggerBuilder;
 
     @DataSource(DataSourceType.MASTER)
     @RequestMapping("/demo")
     public String demo() throws Exception {
         SysUser sysUser = new SysUser();
         List<SysUser> userList = sysUserService.findAll();
+        log.info("你好的");
+
+        LogHelper.info("一切尽在不言中");
+        try {
+            int i = 1/0;
+        }catch (Exception e){
+            e.printStackTrace();
+            log.error(e.toString());
+        }
+
 //
 //        String result = JSON.toJSONString(userList);
 //
@@ -75,6 +71,9 @@ public class SysUserController extends BaseController<ISysUserService, SysUser> 
 //        map2.put("data", LocalDate.now());
 //        map2.put("sss", LocalDateTime.now());
 //
+
+        sysUserService.get();
+
         String result= JSON.toJSONString(userList);
         return result;
     }

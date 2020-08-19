@@ -29,6 +29,9 @@ public class IBatisUtils {
         QueryWrapper queryWrapper = new QueryWrapper();
         for (Map.Entry<String, Object> m : map.entrySet()){
             String colName = m.getValue().toString();
+            if(colName.isEmpty()){ // 空则不传入条件过滤
+                continue;
+            }
             String[] keyAndType = m.getKey().split("&");
             String key = keyAndType[0];
             String type = keyAndType.length>1?keyAndType[1]:"";
