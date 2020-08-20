@@ -6,6 +6,9 @@ import com.natsucloud.common.multidb.DataSource;
 import com.natsucloud.common.multidb.DataSourceType;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.natsucloud.common.mybatis.controller.BaseController;
@@ -37,11 +40,7 @@ public class SysUserController extends BaseController<ISysUserService, SysUser> 
         List<SysUser> userList = sysUserService.findAll();
 
         LogHelper.info("一切尽在不言中");
-        try {
-            int i = 1/0;
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+
 
 //
 //        String result = JSON.toJSONString(userList);
@@ -73,10 +72,26 @@ public class SysUserController extends BaseController<ISysUserService, SysUser> 
 
     @DataSource(DataSourceType.SLAVE)
     @RequestMapping("/hello")
+    @Cacheable(value = "hello",key = "'sss'")
     public String hello() throws Exception {
         SysUser sysUser = new SysUser();
         List<SysUser> userList = sysUserService.findAll();
 
+        String result= JSON.toJSONString(userList);
+        return result;
+    }
+
+    @DataSource(DataSourceType.SLAVE)
+    @RequestMapping("remove")
+    @CacheEvict(value = "hello",key = "'sss'")
+    public String removeCache(){
+        return "清理缓存";
+    }
+
+    @RequestMapping("update")
+    @CachePut(value = "hello",key = "")
+    public String updateCache() throws Exception {
+        List<SysUser> userList = sysUserService.findAll();
         String result= JSON.toJSONString(userList);
         return result;
     }

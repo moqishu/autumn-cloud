@@ -10,6 +10,12 @@ spring:
       jdbc-url: jdbc:mysql://localhost:5831/natsucloud?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
       username: root
       password: Keytop:wabjtam!
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+  cache:
+    type: redis
   #监控关闭
   security:
     basic:
