@@ -11,6 +11,7 @@
 
     <groupId>com.natsucloud</groupId>
     <artifactId>natsu-cloud-common-core</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
     <description>基础组件</description>
     <build>
@@ -25,7 +26,6 @@
             </plugin>
         </plugins>
     </build>
-
 
     <dependencies>
         <!--使用Undertow 替换内置 Tomcat-->
@@ -115,10 +115,6 @@
             <version>3.10</version>
         </dependency>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${alibaba.fastjson.version}</version>
@@ -134,16 +130,25 @@
             <artifactId>jackson-datatype-jsr310</artifactId>
             <version>2.10.2</version>
         </dependency>-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.3.1</version>
-        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
             <version>2.9.2</version>
         </dependency>
+        <!--美化swagger-->
+        <!-- https://mvnrepository.com/artifact/com.github.xiaoymin/swagger-bootstrap-ui -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+            <version>1.9.6</version>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/p6spy/p6spy -->
         <dependency>

@@ -1,7 +1,7 @@
 package com.natsucloud.sys.service;
 
 import com.natsucloud.sys.entity.SysUser;
-import com.natsucloud.common.mybatis.service.IBaseService;
+import com.natsucloud.dba.mybatis.service.IBaseService;
 
 /**
  * <p>

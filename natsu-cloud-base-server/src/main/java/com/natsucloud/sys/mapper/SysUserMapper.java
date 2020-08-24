@@ -1,7 +1,7 @@
 package com.natsucloud.sys.mapper;
 
-import com.natsucloud.common.multidb.DataSource;
-import com.natsucloud.common.multidb.DataSourceType;
+import com.natsucloud.dba.multidb.DataSource;
+import com.natsucloud.dba.multidb.DataSourceType;
 import com.natsucloud.sys.entity.SysUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;

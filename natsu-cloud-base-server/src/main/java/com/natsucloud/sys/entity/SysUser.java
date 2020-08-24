@@ -1,7 +1,7 @@
 package com.natsucloud.sys.entity;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import com.natsucloud.common.mybatis.entity.BaseEntity;
+import com.natsucloud.dba.mybatis.entity.BaseEntity;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModel;

@@ -2,18 +2,17 @@ package com.natsucloud.sys.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.natsucloud.common.logback.LogHelper;
-import com.natsucloud.common.multidb.DataSource;
-import com.natsucloud.common.multidb.DataSourceType;
-import lombok.extern.slf4j.Slf4j;
+import com.natsucloud.dba.multidb.DataSource;
+import com.natsucloud.dba.multidb.DataSourceType;
+import com.natsucloud.dba.mybatis.controller.BaseController;
+import com.natsucloud.sys.entity.SysUser;
+import com.natsucloud.sys.service.ISysUserService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.natsucloud.common.mybatis.controller.BaseController;
-import com.natsucloud.sys.service.ISysUserService;
-import com.natsucloud.sys.entity.SysUser;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -35,6 +34,7 @@ public class SysUserController extends BaseController<ISysUserService, SysUser> 
 
     @DataSource(DataSourceType.MASTER)
     @RequestMapping("/demo")
+    @ApiOperation(value = "获取所有用户", notes = "", httpMethod = "POST", tags = "松村沙有理")
     public String demo() throws Exception {
         SysUser sysUser = new SysUser();
         List<SysUser> userList = sysUserService.findAll();

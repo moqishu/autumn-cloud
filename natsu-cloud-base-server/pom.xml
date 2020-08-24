@@ -26,9 +26,14 @@
 
     <dependencies>
         <!-- 继承基础组件 -->
-        <dependency>
+        <!--<dependency>
             <groupId>com.natsucloud</groupId>
             <artifactId>natsu-cloud-common-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>-->
+        <dependency>
+            <groupId>com.natsucloud</groupId>
+            <artifactId>natsu-cloud-dba-core</artifactId>
             <version>1.0.0</version>
         </dependency>
         <!--阿里巴巴 nacos 服务发现-->

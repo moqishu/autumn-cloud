@@ -1,11 +1,11 @@
 package com.natsucloud.sys.service.impl;
 
-import com.natsucloud.common.multidb.DataSource;
-import com.natsucloud.common.multidb.DataSourceType;
+import com.natsucloud.dba.multidb.DataSource;
+import com.natsucloud.dba.multidb.DataSourceType;
 import com.natsucloud.sys.entity.SysUser;
 import com.natsucloud.sys.mapper.SysUserMapper;
 import com.natsucloud.sys.service.ISysUserService;
-import com.natsucloud.common.mybatis.service.impl.BaseServiceImpl;
+import com.natsucloud.dba.mybatis.service.impl.BaseServiceImpl;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
